@@ -2,12 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage ('Build Image') {
+        stage ('OOOOOOOOOOOOOOPAA') {
             steps {
-                script {
-                    dockerapp = docker.build("chagasgb/api-produto:${env.BUILD_ID}", '-f ./src/Dockerfile ./src') 
-                }                
+                echo 'VAMO QUE VAMOOOOOOOOOOOOOOOOOOOOOOOOOOO'
             }
         }
     }
+
 }
