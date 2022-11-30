@@ -2,11 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage ('OOOOOOOOOOOOOOPAA') {
+        stage ('Build Image') {
             steps {
-                echo 'VAMO QUE VAMOOOOOOOOOOOOOOOOOOOOOOOOOOO'
+                script {
+                    dockerapp = docker.build("fabricioveronez/api-produto:${env.BUILD_ID}", '-f ./src/Dockerfile ./src') 
+                }                
             }
         }
     }
-
 }
